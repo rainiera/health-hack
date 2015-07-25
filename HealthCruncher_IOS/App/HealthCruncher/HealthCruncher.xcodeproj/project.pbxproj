@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFDDDC061B6417720065CC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC051B6417720065CC26 /* AppDelegate.swift */; };
+		EFDDDC081B6417720065CC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC071B6417720065CC26 /* ViewController.swift */; };
+		EFDDDC0B1B6417720065CC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDDDC091B6417720065CC26 /* Main.storyboard */; };
+		EFDDDC0D1B6417720065CC26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFDDDC0C1B6417720065CC26 /* Images.xcassets */; };
+		EFDDDC101B6417720065CC26 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFDDDC0E1B6417720065CC26 /* LaunchScreen.xib */; };
+		EFDDDC1C1B6417720065CC26 /* HealthCruncherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC1B1B6417720065CC26 /* HealthCruncherTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFDDDC161B6417720065CC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFDDDBF81B6417720065CC26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFDDDBFF1B6417720065CC26;
+			remoteInfo = HealthCruncher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFDDDC001B6417720065CC26 /* HealthCruncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthCruncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDDDC041B6417720065CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDDDC051B6417720065CC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFDDDC071B6417720065CC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFDDDC0A1B6417720065CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFDDDC0C1B6417720065CC26 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EFDDDC0F1B6417720065CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EFDDDC151B6417720065CC26 /* HealthCruncherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCruncherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDDDC1A1B6417720065CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDDDC1B1B6417720065CC26 /* HealthCruncherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCruncherTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFDDDBFD1B6417720065CC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDDDC121B6417720065CC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFDDDBF71B6417720065CC26 = {
+			isa = PBXGroup;
+			children = (
+				EFDDDC021B6417720065CC26 /* HealthCruncher */,
+				EFDDDC181B6417720065CC26 /* HealthCruncherTests */,
+				EFDDDC011B6417720065CC26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFDDDC011B6417720065CC26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDDC001B6417720065CC26 /* HealthCruncher.app */,
+				EFDDDC151B6417720065CC26 /* HealthCruncherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFDDDC021B6417720065CC26 /* HealthCruncher */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDDC051B6417720065CC26 /* AppDelegate.swift */,
+				EFDDDC071B6417720065CC26 /* ViewController.swift */,
+				EFDDDC091B6417720065CC26 /* Main.storyboard */,
+				EFDDDC0C1B6417720065CC26 /* Images.xcassets */,
+				EFDDDC0E1B6417720065CC26 /* LaunchScreen.xib */,
+				EFDDDC031B6417720065CC26 /* Supporting Files */,
+			);
+			path = HealthCruncher;
+			sourceTree = "<group>";
+		};
+		EFDDDC031B6417720065CC26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDDC041B6417720065CC26 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFDDDC181B6417720065CC26 /* HealthCruncherTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDDC1B1B6417720065CC26 /* HealthCruncherTests.swift */,
+				EFDDDC191B6417720065CC26 /* Supporting Files */,
+			);
+			path = HealthCruncherTests;
+			sourceTree = "<group>";
+		};
+		EFDDDC191B6417720065CC26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDDC1A1B6417720065CC26 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFDDDBFF1B6417720065CC26 /* HealthCruncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFDDDC1F1B6417720065CC26 /* Build configuration list for PBXNativeTarget "HealthCruncher" */;
+			buildPhases = (
+				EFDDDBFC1B6417720065CC26 /* Sources */,
+				EFDDDBFD1B6417720065CC26 /* Frameworks */,
+				EFDDDBFE1B6417720065CC26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthCruncher;
+			productName = HealthCruncher;
+			productReference = EFDDDC001B6417720065CC26 /* HealthCruncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFDDDC141B6417720065CC26 /* HealthCruncherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFDDDC221B6417720065CC26 /* Build configuration list for PBXNativeTarget "HealthCruncherTests" */;
+			buildPhases = (
+				EFDDDC111B6417720065CC26 /* Sources */,
+				EFDDDC121B6417720065CC26 /* Frameworks */,
+				EFDDDC131B6417720065CC26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFDDDC171B6417720065CC26 /* PBXTargetDependency */,
+			);
+			name = HealthCruncherTests;
+			productName = HealthCruncherTests;
+			productReference = EFDDDC151B6417720065CC26 /* HealthCruncherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFDDDBF81B6417720065CC26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = HealthCruncher;
+				TargetAttributes = {
+					EFDDDBFF1B6417720065CC26 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EFDDDC141B6417720065CC26 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EFDDDBFF1B6417720065CC26;
+					};
+				};
+			};
+			buildConfigurationList = EFDDDBFB1B6417720065CC26 /* Build configuration list for PBXProject "HealthCruncher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFDDDBF71B6417720065CC26;
+			productRefGroup = EFDDDC011B6417720065CC26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFDDDBFF1B6417720065CC26 /* HealthCruncher */,
+				EFDDDC141B6417720065CC26 /* HealthCruncherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFDDDBFE1B6417720065CC26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDDDC0B1B6417720065CC26 /* Main.storyboard in Resources */,
+				EFDDDC101B6417720065CC26 /* LaunchScreen.xib in Resources */,
+				EFDDDC0D1B6417720065CC26 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDDDC131B6417720065CC26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFDDDBFC1B6417720065CC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDDDC081B6417720065CC26 /* ViewController.swift in Sources */,
+				EFDDDC061B6417720065CC26 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDDDC111B6417720065CC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDDDC1C1B6417720065CC26 /* HealthCruncherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFDDDC171B6417720065CC26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFDDDBFF1B6417720065CC26 /* HealthCruncher */;
+			targetProxy = EFDDDC161B6417720065CC26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFDDDC091B6417720065CC26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFDDDC0A1B6417720065CC26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFDDDC0E1B6417720065CC26 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFDDDC0F1B6417720065CC26 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFDDDC1D1B6417720065CC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFDDDC1E1B6417720065CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFDDDC201B6417720065CC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HealthCruncher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFDDDC211B6417720065CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HealthCruncher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EFDDDC231B6417720065CC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HealthCruncherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthCruncher.app/HealthCruncher";
+			};
+			name = Debug;
+		};
+		EFDDDC241B6417720065CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HealthCruncherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthCruncher.app/HealthCruncher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFDDDBFB1B6417720065CC26 /* Build configuration list for PBXProject "HealthCruncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDDDC1D1B6417720065CC26 /* Debug */,
+				EFDDDC1E1B6417720065CC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFDDDC1F1B6417720065CC26 /* Build configuration list for PBXNativeTarget "HealthCruncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDDDC201B6417720065CC26 /* Debug */,
+				EFDDDC211B6417720065CC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFDDDC221B6417720065CC26 /* Build configuration list for PBXNativeTarget "HealthCruncherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDDDC231B6417720065CC26 /* Debug */,
+				EFDDDC241B6417720065CC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFDDDBF81B6417720065CC26 /* Project object */;
+}
