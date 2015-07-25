@@ -27,7 +27,7 @@ Your first challenge is to, using and finding patterns in the starter code, to m
 
 -Hint, you'll need `$ python main.py` to run the webserver on localhost (type in `localhost` into your browser)
 
-## Team
+## Primary roles
 Rainier Ababao - data science  
 Hayley Call - web dev  
 Sarah Gorring - web dev  
