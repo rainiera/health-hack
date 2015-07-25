@@ -4,7 +4,7 @@ athenahealth hackathon 2015
 ## Team
 Rainier Ababao  
 Hayley Call  
-Sarah Gorring
+Sarah Gorring  
 Shaun Mataire
 
 ## Idea (0.1)
