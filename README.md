@@ -28,10 +28,10 @@ Your first challenge is to, using and finding patterns in the starter code, to m
 -Hint, you'll need `$ python main.py` to run the webserver on localhost (type in `localhost` into your browser)
 
 ## Team
-Rainier Ababao  
-Hayley Call  
-Sarah Gorring  
-Shaun Mataire
+Rainier Ababao - data science  
+Hayley Call - web dev  
+Sarah Gorring - web dev  
+Shaun Mataire -  iOS  
 
 ## Idea (0.1)
 A web app that accepts user input on easily accessible patient data and output metrics based on a machine learning algorithm.
