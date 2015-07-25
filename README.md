@@ -23,7 +23,7 @@ athenahealth hackathon 2015
 `$ redis-server`
 - Now you're ready!
 
-Your first challenge is to, using and finding patterns in the starter code, to make a bare bones web app that takes user input (height and weight), sends it to a server, and redirects the user to a page that indicates their BMI, and, depending on if their BMI is > or <= 25, says if the BMI is over the healthy average. Don't worry about the design yet, just worry about figuring out how Flask and hitting a backend works.
+Hayley and Sarah, your first challenge is to, using and finding patterns in the starter code, to make a bare bones web app that takes user input (height and weight), sends it to a server, and redirects the user to a page that indicates their BMI, and, depending on if their BMI is > or <= 25, says if the BMI is over the healthy average. Don't worry about the design yet, just worry about figuring out how Flask and hitting a backend works.
 
 -Hint, you'll need `$ python main.py` to run the webserver on localhost (type in `localhost` into your browser)
 
