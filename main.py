@@ -9,10 +9,27 @@ def index():
 
 @app.route('/', methods=['POST'])
 def post():
-    text = request.form['hi']
-    print request.form
-    r.set('input', text)
-    return "You entered \"" + text + "\"."
+    weight = float(request.form['weight'])
+    height = float(request.form['height'])
+    if weight == ''and height == '':
+        return "You must enter a weight and a height."
+    elif weight == '':
+        return "You must enter a weight."
+    elif height == '':
+        return "You must enter a height."
+    else:
+        print request.form
+        print type(weight)
+        print type(height)
+        bmi = (weight * 703)/(height**2)
+        print type(bmi)
+        r.set('rw', weight)
+        r.set('rh', height)
+        r.set('rbmi', bmi)
+
+        # return "You entered " + weight + " and " + height + " and your BMI is " + bmi + "."
+        return "Your BMI is {0}".format(bmi)
 
 if __name__ == '__main__':
     app.run(debug=True)
+    

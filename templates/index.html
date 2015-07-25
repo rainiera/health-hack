@@ -1,15 +1,16 @@
 <html>
 
 <head>
-	<title>Starter app!</title>
+	<title>BMI Calculator</title>
 </head>
 
 <body>
-	This web app takes user input and stores it into Redis.
+	This web app takes user input (weight, height) and stores it into Redis, returns bmi.
 	<br>
-	Enter some text:
+	Enter weight and height:
     <form action="." method="POST">
-        <input type="text" name="hi">
+        <input type="text" name="weight">
+        <input type="text" name="height">
         <input type="submit" name="my-form" value="Send">
     </form>
 </body>
