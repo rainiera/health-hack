@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
-import redis
 import os
 
 app = Flask(__name__)
-r = redis.StrictRedis(host='127.0.0.1', port=6379, db=0)
 
 @app.route('/')
 def index():
@@ -20,19 +18,11 @@ def post():
     elif height == '':
         return "You must enter a height."
     else:
-        print request.form
-        print type(weight)
-        print type(height)
         bmi = (weight * 703)/(height**2)
-        print type(bmi)
-        r.set('rw', weight)
-        r.set('rh', height)
-        r.set('rbmi', bmi)
-
         # return "You entered " + weight + " and " + height + " and your BMI is " + bmi + "."
         return "Your BMI is {0}".format(bmi)
 
 if __name__ == '__main__':
     port = int(os.environ.get("POST", 5000))
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
 
