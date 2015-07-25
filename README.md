@@ -5,7 +5,9 @@ athenahealth hackathon 2015
 
 - I assume you have `homebrew`  
 - Go to your terminal  
+- `cd` into your `dev` directory (if you don't have one, make one!!)  
 `$ git clone https://github.com/rainiera/health-hack.git`  
+- This command puts the source of the starter app (this repo) in the directory you're in.  
 `$ brew install python`  
 - This command installs a Python other than the Python installed on your system (which Mac OSX uses, and you don't really want to mess with). Also installs `pip`, which stands for "pip installs packages" (get it???).  
 - Check that you're on the right Python:   
@@ -27,4 +29,6 @@ Shaun Mataire
 ## Idea (0.1)
 A web app that accepts user input on easily accessible patient data and output metrics based on a machine learning algorithm.
 
-Soon... an API
+Soon... an API to hook up to an iOS app!
+
+
