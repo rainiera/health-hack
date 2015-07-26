@@ -1,5 +1,8 @@
 # HealthCruncher  
-athenahealth hackathon 2015
+
+# [Live demo](http://strtup.me:5000)  
+
+athenahealth hackathon 2015  
 
 Netflix but for predicting customers' health outcomes.  
 :dollar: "B2B SaaS" (Business to business software as a service)  
@@ -27,8 +30,9 @@ It is also an API that (will) attempt to follow the principles of REST :sleeping
 - Save some :dollar: , shut it down
 
 ## Todo
+- HTTPS  
 - Better the algorithm (actual data, better validation)  
-- Better the API (fix some Flask routing issues, )
+- Better the API (fix some Flask routing issues)  
 - Better form validation (CSRF protection!)  
 - Streamline deployment (scripts, etc.)  
 
