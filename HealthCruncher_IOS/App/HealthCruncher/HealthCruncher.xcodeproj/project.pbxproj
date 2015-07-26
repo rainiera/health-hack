@@ -16,6 +16,11 @@
 		EFDDDC261B6443220065CC26 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC251B6443220065CC26 /* HomeViewController.swift */; };
 		EFDDDC281B644CA70065CC26 /* SymptomLoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC271B644CA70065CC26 /* SymptomLoggerViewController.swift */; };
 		EFDDDC2A1B644CE20065CC26 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC291B644CE20065CC26 /* NotificationsViewController.swift */; };
+		EFDDDC2C1B653C690065CC26 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC2B1B653C690065CC26 /* BasicInfoViewController.swift */; };
+		EFDDDC2E1B653C7C0065CC26 /* MedicalHstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC2D1B653C7C0065CC26 /* MedicalHstoryViewController.swift */; };
+		EFDDDC301B653C900065CC26 /* SubstanceUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC2F1B653C900065CC26 /* SubstanceUsageViewController.swift */; };
+		EFDDDC321B653CA80065CC26 /* PersonalHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC311B653CA80065CC26 /* PersonalHealthViewController.swift */; };
+		EFDDDC341B653CB50065CC26 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDDC331B653CB50065CC26 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		EFDDDC251B6443220065CC26 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EFDDDC271B644CA70065CC26 /* SymptomLoggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SymptomLoggerViewController.swift; path = ../SymptomLoggerViewController.swift; sourceTree = "<group>"; };
 		EFDDDC291B644CE20065CC26 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationsViewController.swift; path = ../NotificationsViewController.swift; sourceTree = "<group>"; };
+		EFDDDC2B1B653C690065CC26 /* BasicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
+		EFDDDC2D1B653C7C0065CC26 /* MedicalHstoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalHstoryViewController.swift; sourceTree = "<group>"; };
+		EFDDDC2F1B653C900065CC26 /* SubstanceUsageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceUsageViewController.swift; sourceTree = "<group>"; };
+		EFDDDC311B653CA80065CC26 /* PersonalHealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalHealthViewController.swift; sourceTree = "<group>"; };
+		EFDDDC331B653CB50065CC26 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,11 @@
 				EFDDDC251B6443220065CC26 /* HomeViewController.swift */,
 				EFDDDC0E1B6417720065CC26 /* LaunchScreen.xib */,
 				EFDDDC031B6417720065CC26 /* Supporting Files */,
+				EFDDDC2B1B653C690065CC26 /* BasicInfoViewController.swift */,
+				EFDDDC2D1B653C7C0065CC26 /* MedicalHstoryViewController.swift */,
+				EFDDDC2F1B653C900065CC26 /* SubstanceUsageViewController.swift */,
+				EFDDDC311B653CA80065CC26 /* PersonalHealthViewController.swift */,
+				EFDDDC331B653CB50065CC26 /* ResultsViewController.swift */,
 			);
 			path = HealthCruncher;
 			sourceTree = "<group>";
@@ -222,9 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFDDDC2A1B644CE20065CC26 /* NotificationsViewController.swift in Sources */,
+				EFDDDC321B653CA80065CC26 /* PersonalHealthViewController.swift in Sources */,
+				EFDDDC2C1B653C690065CC26 /* BasicInfoViewController.swift in Sources */,
+				EFDDDC341B653CB50065CC26 /* ResultsViewController.swift in Sources */,
 				EFDDDC281B644CA70065CC26 /* SymptomLoggerViewController.swift in Sources */,
 				EFDDDC081B6417720065CC26 /* ViewController.swift in Sources */,
 				EFDDDC061B6417720065CC26 /* AppDelegate.swift in Sources */,
+				EFDDDC301B653C900065CC26 /* SubstanceUsageViewController.swift in Sources */,
+				EFDDDC2E1B653C7C0065CC26 /* MedicalHstoryViewController.swift in Sources */,
 				EFDDDC261B6443220065CC26 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MTd-Bf-sPE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Basic Info.-->
         <scene sceneID="dy5-3E-KMi">
             <objects>
-                <viewController id="awv-Yr-iOh" sceneMemberID="viewController">
+                <viewController id="awv-Yr-iOh" customClass="BasicInfoViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9qO-e8-Wen"/>
                         <viewControllerLayoutGuide type="bottom" id="cpm-Ri-ZlF"/>
@@ -258,20 +259,26 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Basic Info." id="0Ii-z8-Idv">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="dSc-cT-tTI">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ef0-u7-d3Q">
-                                <rect key="frame" x="138" y="489" width="32" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6A8-Uu-Pn1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nyO-pS-1FU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wX6-34-VGH" kind="show" id="SvL-md-3eh"/>
+                                    <segue destination="wX6-34-VGH" kind="show" id="5b4-Vf-FCB"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="age" destination="Uyq-6g-NGa" id="OKG-Yi-Az2"/>
+                        <outlet property="name" destination="pcr-q8-HCw" id="75C-ef-alQ"/>
+                        <outlet property="weight" destination="UFT-fH-chr" id="lJp-Pj-eWg"/>
+                        <outlet property="zipCode" destination="Adc-Dk-Swa" id="eVD-x6-eDh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOI-WK-0G3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -320,48 +327,110 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempLogo" translatesAutoresizingMaskIntoConstraints="NO" id="w9u-HS-dBu">
                                 <rect key="frame" x="250" y="94" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="KjD-i1-Tfu"/>
-                                    <constraint firstAttribute="height" constant="100" id="hR4-1b-gXz"/>
+                                    <constraint firstAttribute="height" constant="100" id="UWH-ZJ-Ng6"/>
+                                    <constraint firstAttribute="width" constant="100" id="acl-H1-qSv"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UWH-ZJ-Ng6"/>
+                                        <exclude reference="acl-H1-qSv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UWH-ZJ-Ng6"/>
+                                        <include reference="acl-H1-qSv"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-R6-bTi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="docImg" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-cG-cuc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DfK-cG-cuc" secondAttribute="height" multiplier="100:53" id="uvf-yB-G39"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uvf-yB-G39"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="uvf-yB-G39"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="kjkjkf" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-R6-bTi">
                                 <rect key="frame" x="16" y="223" width="568" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="u2W-fY-bRe"/>
-                                </constraints>
-                                <string key="text">Take this quiz to evaluate how your current lifestyle habits affect your cardiovascular health, and discover simple steps you can take to incorporate a Heart Healthy lifestyle into everyday living. Knowledge is power. Take the first step towards protecting your heart and your health!</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="392" width="368" height="130"/>
+                                </variation>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-Nl-77z">
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DfK-cG-cuc" firstAttribute="top" secondItem="FF8-Qi-UaH" secondAttribute="bottom" id="8SC-nX-oBy"/>
+                            <constraint firstItem="w9u-HS-dBu" firstAttribute="top" secondItem="DfK-cG-cuc" secondAttribute="bottom" constant="8" id="K0c-WM-VrE"/>
+                            <constraint firstAttribute="centerX" secondItem="DfK-cG-cuc" secondAttribute="centerX" id="KDp-dE-HZa"/>
+                            <constraint firstAttribute="centerX" secondItem="w9u-HS-dBu" secondAttribute="centerX" constant="16" id="RhT-OH-FZc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DfK-cG-cuc" secondAttribute="trailing" constant="-16" id="SNx-qi-9AF"/>
+                            <constraint firstItem="DfK-cG-cuc" firstAttribute="leading" secondItem="jsH-Ms-RDv" secondAttribute="leadingMargin" constant="-16" id="Zpn-ea-AAj"/>
+                            <constraint firstItem="NLg-R6-bTi" firstAttribute="top" secondItem="w9u-HS-dBu" secondAttribute="bottom" constant="8" id="aaX-nl-h9Q"/>
+                            <constraint firstAttribute="centerX" secondItem="NLg-R6-bTi" secondAttribute="centerX" id="f7u-vi-DOg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DfK-cG-cuc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8SC-nX-oBy"/>
+                                <exclude reference="KDp-dE-HZa"/>
+                                <exclude reference="SNx-qi-9AF"/>
+                                <exclude reference="Zpn-ea-AAj"/>
+                                <exclude reference="K0c-WM-VrE"/>
+                                <exclude reference="RhT-OH-FZc"/>
+                                <exclude reference="aaX-nl-h9Q"/>
+                                <exclude reference="f7u-vi-DOg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DfK-cG-cuc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8SC-nX-oBy"/>
+                                <include reference="KDp-dE-HZa"/>
+                                <include reference="SNx-qi-9AF"/>
+                                <include reference="Zpn-ea-AAj"/>
+                                <include reference="K0c-WM-VrE"/>
+                                <include reference="RhT-OH-FZc"/>
+                                <include reference="aaX-nl-h9Q"/>
+                                <include reference="f7u-vi-DOg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="HealthCruncher" id="tb8-7m-qnP">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="MoD-WD-Acv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q7W-Nl-77z">
                                 <rect key="frame" x="234" y="449" width="132" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                 <state key="normal" title="Begin Survey">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="awv-Yr-iOh" kind="show" id="4Td-7P-JcB"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="w9u-HS-dBu" secondAttribute="centerX" id="1le-Ss-Wh4"/>
-                            <constraint firstAttribute="centerX" secondItem="q7W-Nl-77z" secondAttribute="centerX" constant="-0.5" id="2LX-sb-3LW"/>
-                            <constraint firstItem="NLg-R6-bTi" firstAttribute="leading" secondItem="jsH-Ms-RDv" secondAttribute="leadingMargin" id="EDp-72-90i"/>
-                            <constraint firstItem="q7W-Nl-77z" firstAttribute="top" secondItem="NLg-R6-bTi" secondAttribute="bottom" constant="8" id="eig-8e-P5i"/>
-                            <constraint firstItem="NLg-R6-bTi" firstAttribute="trailing" secondItem="jsH-Ms-RDv" secondAttribute="trailingMargin" id="iVf-TC-0Mv"/>
-                            <constraint firstItem="w9u-HS-dBu" firstAttribute="top" secondItem="FF8-Qi-UaH" secondAttribute="bottom" constant="30" id="jYK-en-ZsN"/>
-                            <constraint firstItem="NLg-R6-bTi" firstAttribute="top" secondItem="w9u-HS-dBu" secondAttribute="bottom" constant="29" id="n0b-At-tAw"/>
-                            <constraint firstAttribute="centerX" secondItem="NLg-R6-bTi" secondAttribute="centerX" id="na2-t9-7Xi"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="HealthCruncher" id="tb8-7m-qnP"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAy-ip-OyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="-130.49999999999997"/>
+            <point key="canvasLocation" x="618" y="-130.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0RU-Rr-XLY">
@@ -385,7 +454,7 @@
         <!--Medical History-->
         <scene sceneID="7yn-Zd-wid">
             <objects>
-                <viewController id="wX6-34-VGH" sceneMemberID="viewController">
+                <viewController id="wX6-34-VGH" customClass="MedicalHstoryViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Led-QS-WYL"/>
                         <viewControllerLayoutGuide type="bottom" id="RIB-3N-3sF"/>
@@ -648,6 +717,12 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="LifeTreatSeg" destination="1zl-UB-1Cr" id="nYX-jh-yj2"/>
+                        <outlet property="diabeticsSeg" destination="Qkj-7o-8y9" id="lU4-nU-6ED"/>
+                        <outlet property="heartDiseaseSeg" destination="t2T-Mz-3lk" id="ntJ-j7-olq"/>
+                        <outlet property="otherDiseasesSeg" destination="l6L-mk-Vw6" id="891-0h-9UE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3y-QV-7Qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -656,7 +731,7 @@
         <!--Substance Usage-->
         <scene sceneID="zkP-9U-A3b">
             <objects>
-                <viewController id="0Hn-gx-AV5" sceneMemberID="viewController">
+                <viewController id="0Hn-gx-AV5" customClass="SubstanceUsageViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Bi-tw-ZYd"/>
                         <viewControllerLayoutGuide type="bottom" id="B5R-An-UZ9"/>
@@ -832,15 +907,20 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="alcoholSeg" destination="2Yy-Bv-6tv" id="Opo-fY-qnD"/>
+                        <outlet property="otherSubsSeg" destination="rTr-JU-qm7" id="TGb-Kp-QXi"/>
+                        <outlet property="smokingSeg" destination="wZl-zM-EUR" id="YHN-9F-b2G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HZ-vh-gJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3076.875" y="-129.92957746478874"/>
         </scene>
-        <!--Personal ***-->
+        <!--Personal Health-->
         <scene sceneID="neZ-7h-zSn">
             <objects>
-                <viewController id="6bz-wb-f3w" sceneMemberID="viewController">
+                <viewController id="6bz-wb-f3w" customClass="PersonalHealthViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NFB-Qh-c3y"/>
                         <viewControllerLayoutGuide type="bottom" id="q3g-a7-xMb"/>
@@ -849,15 +929,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate on a Scale 1-5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK7-uL-p0e">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="124" y="72" width="152" height="21"/>
-                                </variation>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rh2-lh-VCB">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                 <constraints>
@@ -886,6 +957,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate on a Scale 1-5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK7-uL-p0e">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="124" y="72" width="152" height="21"/>
+                                </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TuB-5j-Ua4">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
@@ -1026,7 +1106,7 @@
                                     </mask>
                                 </variation>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbE-Jy-l3y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Happiness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbE-Jy-l3y">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1041,6 +1121,7 @@
                             <constraint firstItem="nrL-OH-k9d" firstAttribute="top" secondItem="GK7-uL-p0e" secondAttribute="bottom" constant="8" id="3ut-up-645"/>
                             <constraint firstItem="TuB-5j-Ua4" firstAttribute="top" secondItem="sYA-l3-RaG" secondAttribute="bottom" constant="8" id="4af-C6-i4R"/>
                             <constraint firstItem="Oi0-eb-kkE" firstAttribute="top" secondItem="SMW-fy-HLP" secondAttribute="bottom" constant="8" id="533-0l-1a0"/>
+                            <constraint firstItem="ac9-fX-mqZ" firstAttribute="leading" secondItem="WbE-Jy-l3y" secondAttribute="trailing" constant="-146" id="Bik-v1-MPF"/>
                             <constraint firstAttribute="centerX" secondItem="rh2-lh-VCB" secondAttribute="centerX" id="DxS-Ht-XPc"/>
                             <constraint firstAttribute="centerX" secondItem="TuB-5j-Ua4" secondAttribute="centerX" id="G3W-gi-vi2"/>
                             <constraint firstItem="bfX-eL-0XS" firstAttribute="top" secondItem="Dhs-fd-4jO" secondAttribute="bottom" constant="8" id="LqX-Qt-R4W"/>
@@ -1054,6 +1135,7 @@
                             <constraint firstItem="WbE-Jy-l3y" firstAttribute="top" secondItem="ac9-fX-mqZ" secondAttribute="bottom" constant="8" id="con-U9-S6t"/>
                             <constraint firstItem="zYR-zK-2US" firstAttribute="top" secondItem="WbE-Jy-l3y" secondAttribute="bottom" constant="8" id="du1-VR-5F0"/>
                             <constraint firstItem="rh2-lh-VCB" firstAttribute="leading" secondItem="sYA-l3-RaG" secondAttribute="trailing" constant="-49" id="fKY-3t-6Au"/>
+                            <constraint firstItem="ac9-fX-mqZ" firstAttribute="leading" secondItem="WbE-Jy-l3y" secondAttribute="trailing" constant="-146" id="fhK-LW-wwR"/>
                             <constraint firstItem="wbb-xG-0SU" firstAttribute="top" secondItem="TuB-5j-Ua4" secondAttribute="bottom" constant="8" id="kAr-jY-SrB"/>
                             <constraint firstAttribute="centerX" secondItem="SMW-fy-HLP" secondAttribute="centerX" id="mBR-Ds-OFn"/>
                             <constraint firstItem="rh2-lh-VCB" firstAttribute="top" secondItem="nrL-OH-k9d" secondAttribute="bottom" constant="8" id="nTh-FH-pwb"/>
@@ -1064,9 +1146,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="GK7-uL-p0e"/>
                                 <exclude reference="rh2-lh-VCB"/>
                                 <exclude reference="nrL-OH-k9d"/>
+                                <exclude reference="GK7-uL-p0e"/>
                                 <exclude reference="TuB-5j-Ua4"/>
                                 <exclude reference="sYA-l3-RaG"/>
                                 <exclude reference="Dhs-fd-4jO"/>
@@ -1100,8 +1182,10 @@
                                 <exclude reference="vb0-UX-yqX"/>
                                 <exclude reference="533-0l-1a0"/>
                                 <exclude reference="3fE-gK-Foa"/>
+                                <exclude reference="Bik-v1-MPF"/>
                                 <exclude reference="T3A-HG-ysl"/>
                                 <exclude reference="WSJ-1Y-iaR"/>
+                                <exclude reference="fhK-LW-wwR"/>
                                 <exclude reference="con-U9-S6t"/>
                                 <exclude reference="1xS-jj-TL7"/>
                                 <exclude reference="du1-VR-5F0"/>
@@ -1109,9 +1193,9 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="GK7-uL-p0e"/>
                                 <include reference="rh2-lh-VCB"/>
                                 <include reference="nrL-OH-k9d"/>
+                                <include reference="GK7-uL-p0e"/>
                                 <include reference="TuB-5j-Ua4"/>
                                 <include reference="sYA-l3-RaG"/>
                                 <include reference="Dhs-fd-4jO"/>
@@ -1145,15 +1229,17 @@
                                 <include reference="vb0-UX-yqX"/>
                                 <include reference="533-0l-1a0"/>
                                 <include reference="3fE-gK-Foa"/>
+                                <include reference="Bik-v1-MPF"/>
                                 <include reference="T3A-HG-ysl"/>
                                 <include reference="WSJ-1Y-iaR"/>
+                                <include reference="fhK-LW-wwR"/>
                                 <include reference="con-U9-S6t"/>
                                 <include reference="1xS-jj-TL7"/>
                                 <include reference="du1-VR-5F0"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Personal ***" id="Wdd-1c-ieL">
+                    <navigationItem key="navigationItem" title="Personal Health" id="Wdd-1c-ieL">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wGc-74-ZOL">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dDx-G0-fyB">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1168,6 +1254,14 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="diettSeg" destination="SMW-fy-HLP" id="Vzw-fq-N9b"/>
+                        <outlet property="emotionalSeg" destination="ac9-fX-mqZ" id="8sM-Ds-TNm"/>
+                        <outlet property="happinessSeg" destination="zYR-zK-2US" id="fVb-ci-ZEf"/>
+                        <outlet property="hygieneSeg" destination="Dhs-fd-4jO" id="GSc-rW-1za"/>
+                        <outlet property="physicalActSeg" destination="rh2-lh-VCB" id="HUA-ib-yh1"/>
+                        <outlet property="stressSeg" destination="TuB-5j-Ua4" id="llC-cB-EJl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4r-8U-QBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1176,7 +1270,7 @@
         <!--Results-->
         <scene sceneID="cHX-b4-IrI">
             <objects>
-                <viewController id="DJX-is-Dv0" sceneMemberID="viewController">
+                <viewController id="DJX-is-Dv0" customClass="ResultsViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xXI-16-0AA"/>
                         <viewControllerLayoutGuide type="bottom" id="FDS-Wh-Cup"/>
@@ -1216,7 +1310,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" percent likelihood of diabetes during adulthood" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-xy-vGs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likelihood of diabetes during adulthood" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-xy-vGs">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1228,7 +1322,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" percent likelihood of diabetes during adulthood" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlo-py-mJF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan Recommendation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlo-py-mJF">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1245,9 +1339,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="269" y="111" width="43" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdz-oK-Rch">
                                 <rect key="frame" x="72" y="262" width="176" height="30"/>
@@ -1272,6 +1363,7 @@
                             <constraint firstItem="mdz-oK-Rch" firstAttribute="leading" secondItem="4Cz-K7-WXx" secondAttribute="trailing" constant="-118" id="B1h-5d-9nK"/>
                             <constraint firstItem="Zsz-jp-IML" firstAttribute="leading" secondItem="54N-QB-m7L" secondAttribute="trailing" constant="19" id="Hal-bI-q0A"/>
                             <constraint firstItem="cfr-xy-vGs" firstAttribute="top" secondItem="LTs-60-7Dd" secondAttribute="bottom" constant="33" id="J5b-0e-iMS"/>
+                            <constraint firstItem="54N-QB-m7L" firstAttribute="top" secondItem="Zsz-jp-IML" secondAttribute="bottom" constant="-60" id="Lxu-Zn-z17"/>
                             <constraint firstItem="4Cz-K7-WXx" firstAttribute="top" secondItem="Qlo-py-mJF" secondAttribute="bottom" constant="8" id="QGA-CI-Tu7"/>
                             <constraint firstAttribute="centerX" secondItem="Qlo-py-mJF" secondAttribute="centerX" constant="-0.5" id="Rda-qF-r0f"/>
                             <constraint firstAttribute="centerX" secondItem="sE9-Hl-Sch" secondAttribute="centerX" constant="-0.5" id="Tk3-LQ-bjV"/>
@@ -1293,6 +1385,7 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="26z-HX-M80"/>
+                                <exclude reference="Lxu-Zn-z17"/>
                                 <exclude reference="fwA-ze-OMc"/>
                                 <exclude reference="7Sp-23-Pt8"/>
                                 <exclude reference="Tk3-LQ-bjV"/>
@@ -1324,6 +1417,7 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="26z-HX-M80"/>
+                                <include reference="Lxu-Zn-z17"/>
                                 <include reference="fwA-ze-OMc"/>
                                 <include reference="7Sp-23-Pt8"/>
                                 <include reference="Tk3-LQ-bjV"/>
@@ -1343,18 +1437,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Results" id="M8G-DN-dYE">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="6Qf-RR-475">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t4o-15-c62">
-                                <rect key="frame" x="16" y="530" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Results" id="M8G-DN-dYE"/>
+                    <connections>
+                        <outlet property="clientNameLAbel" destination="Zsz-jp-IML" id="HqI-Sp-2e1"/>
+                        <outlet property="diabetesLabel" destination="Fy9-eH-Otx" id="NtQ-3B-rcr"/>
+                        <outlet property="heartDiseaseLabel" destination="LTs-60-7Dd" id="WBq-DQ-xg1"/>
+                        <outlet property="planLabel" destination="4Cz-K7-WXx" id="FwH-Il-EvU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFh-mi-lSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1440,6 +1529,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="docImg" width="300" height="200"/>
         <image name="tempLogo" width="256" height="256"/>
         <image name="user" width="50" height="50"/>
     </resources>

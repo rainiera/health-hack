@@ -1,25 +1,22 @@
 //
-//  HomeViewController.swift
+//  ResultsViewController.swift
 //  HealthCruncher
 //
-//  Created by Shaun Mataire on 7/25/15.
+//  Created by Shaun Mataire on 7/26/15.
 //  Copyright (c) 2015 HealthCruncher. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ResultsViewController: UIViewController {
 
+    @IBOutlet weak var clientNameLAbel: UILabel!
+    @IBOutlet weak var heartDiseaseLabel: UILabel!
+    @IBOutlet weak var diabetesLabel: UILabel!
+    @IBOutlet weak var planLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //set app design
-        var nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.BlackTranslucent
-        nav?.titleTextAttributes  = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        nav?.tintColor = UIColor.whiteColor()
-        
-     
+
         // Do any additional setup after loading the view.
     }
 
@@ -40,13 +37,3 @@ class HomeViewController: UIViewController {
     */
 
 }
-
-
-//Universal input Values
-var zipCodeText: String!
-var nameText: String!
-var ageText: String!
-var weightText: String!
-var heightText: String!
-var sexText: String!
-var raceText: String!
