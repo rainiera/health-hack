@@ -2,12 +2,12 @@
 athenahealth hackathon 2015
 
 Netflix but for insurance companies to predict customers' health outcomes.  
-"B2B SaaS" (Business to business software as a service)  
+:dollar: "B2B SaaS" (Business to business software as a service)  
 
-It is also an API that attempts to follow the principles of REST  
+It is also an API that attempts to follow the principles of REST :sleeping:  
 
 ## Development  
-- Some stuff we use: `flask`, DigitalOcean, `scikit-learn`, `anaconda` ;)  
+- Some stuff we use: :snake: `flask`, DigitalOcean, `scikit-learn`, `anaconda`  
 - `$ python main.py`  
 - Test at `0.0.0.0:5000`  
 - Use a `virtualenv` if you feel like it.  
@@ -18,13 +18,13 @@ It is also an API that attempts to follow the principles of REST
 - `$ git pull`
 - In `main.py`, `debug` should be `FALSE`!!!  
 - `$ . venv/bin/activate`  
-- `$ nohup python main.py > /dev/null&` (TBD)  
+- :snake: `$ nohup python main.py > /dev/null&` (TBD)  
 
 ## Undeployment
 - `$ ps -fA | grep python`  
 - Find the `<PID>` of the one that has python main.py
 - `kill <PID>`  
-- Save some 
+- Save some :dollar: , shut it down
 
 ## Todo
 - Better the algorithm (actual data, better validation)  
