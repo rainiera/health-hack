@@ -1,33 +1,68 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-
-	<title>HealthCruncher</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>HealthCruncher</title>
 </head>
 
 <body>
-  <h1>healthcruncher</h1>
-  <div class="image-group">
-    <div class="sub">
-    <img src="{{ url_for('static', filename='imgs/doctorpatient.jpg') }}" alt="DoctorPatient" id="imgdp">
+    <div class="container">
+        <div class="content-container">
+            <div class="image-group">
+                <img src="{{ url_for('static', filename='imgs/logo_transparent.png') }}" alt="logo" id="logo">
+            </div>
+            <h3>We use data science to make the most accurate health predictions</h3>
+            <h2>Try our demo!</h2>
+            
+            <div class="form-container">
+                <div class="button-group-container">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">Friendly</button>
+                        <button type="button" class="btn btn-default">API (JSON)</button>
+                    </div>
+                </div>
+                <h4>Please answer a few questions to get started.</h4>
+                <form method="POST" action=".">
+                    <div class="form-group">
+                        {{ form.height.label }}
+                        {{ form.height(class="form-control", placeholder="in inches") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.weight.label }}
+                        {{ form.weight(class="form-control", placeholder="in pounds") }}
+                    </div>
+                    
+                    {% for field in fields %}
+                    <div class="form-group">
+                        {{ form[field].label(class="control-label") }}
+                        {{ form[field](class="form-control") }}
+                    </div>
+                    {% endfor %}
+
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="reset" class="btn btn-warning">Reset</button>
+                    </div>
+                </form>
+
+<!--
+                <form action="." method="POST">
+                    <div class="form-group">
+                        <label for="height">height</label>
+                        <input type="text" class="form-control" id="height" placeholder="height" name="height">
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">weight</label>
+                        <input type="text" class="form-control" id="weight" placeholder="weight" name="weight">
+                    </div>
+                </form>
+-->
+            </div>
+        </div>
     </div>
-    </div>
-    <h3> We want to provide you with most accurate health predictions </h3>
-    <h4>Enter weight and height:</h4>
-  <form action="." method="POST">
-  <div class="form-group">
-    <label for="weight">weight</label>
-    <input type="text" class="form-control" id="weight" placeholder="weight" name="weight">
-  </div>
-  <div class="form-group">
-    <label for="height">height</label>
-    <input type="text" class="form-control" id="height" placeholder="height" name="height">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button name="my-form">
-</form>
 </body>
 
 </html>

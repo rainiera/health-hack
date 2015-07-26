@@ -1,52 +1,58 @@
 body {
-    background: url(../imgs/minions.png);
+    /* Adapted from: startupstockphotos.com */
+    background: url(../imgs/machinelearner_2_blur.jpg) center;
+}
+
+.content-container {}
+
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.button-group-container {
+    text-align: center;
+}
+
+.button-container {
+    padding-top: 10px;
 }
 
 h1 {
     text-align: center;
     font-family: 'Raleway', 'sans-serif';
-    margin-top: 50px;
-    padding-bottom: 50px;
 }
 
-.sub {
-    line-height: 150%;
-    white-space: nowrap;
-    background: rgba(255, 255, 255, 0.8);
-/*    padding-bottom: 35px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-*/}
-
-
-#imgdp{ 
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+h2 {
+    text-align: center;
 }
 
 h3 {
     text-align: center;
-    padding-bottom: 50px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 h4 {
-    margin-left: 75px;
-    margin-right: 800px;
     text-align: center;
-    padding-bottom: 20px
 }
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    opacity: 0.8;
+}
+
 .form-group {
     text-align: left;
-    margin-left: 75px;
-    margin-right: 800px;
-    color: blue;
+    color: black;
     font-family: 'Raleway', sans-serif;
 }
 
 button {
-    text-align: left;
-    margin-left: 75px;
-    margin-right: 800px;
+    margin: 0 auto;
 }
 
