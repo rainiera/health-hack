@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bpn-AR-egN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MTd-Bf-sPE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--HeathCruncher-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIX-Ph-wJS">
-                                <rect key="frame" x="137" y="123" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="awv-Yr-iOh" kind="push" id="9Vb-1f-F7T"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="HeathCruncher" id="Ub9-nr-9uZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="991.19999999999993" y="259.86000000000001"/>
-        </scene>
-        <!--Demographic-->
+        <!--Basic Info.-->
         <scene sceneID="dy5-3E-KMi">
             <objects>
                 <viewController id="awv-Yr-iOh" sceneMemberID="viewController">
@@ -46,8 +17,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSb-Te-adz">
+                                <rect key="frame" x="145" y="115" width="31" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 32" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Uu-4T-XLk">
+                                <rect key="frame" x="112" y="144" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sex" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-uW-E8J">
+                                <rect key="frame" x="144" y="316" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Shq-LF-1mW">
+                                <rect key="frame" x="102" y="345" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Race" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUJ-II-g0G">
+                                <rect key="frame" x="140" y="381" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zrc-oS-SJ4">
+                                <rect key="frame" x="16" y="410" width="288" height="29"/>
+                                <segments>
+                                    <segment title="White"/>
+                                    <segment title="Black"/>
+                                    <segment title="Hisp."/>
+                                    <segment title="Asian"/>
+                                    <segment title="Other"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xas-64-lOL">
+                                <rect key="frame" x="131" y="182" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 160lb" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LjJ-W8-0ow">
+                                <rect key="frame" x="111" y="211" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kop-Re-JKc">
+                                <rect key="frame" x="135" y="249" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 5'8&quot;" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQC-1y-nvr">
+                                <rect key="frame" x="112" y="278" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef0-u7-d3Q">
-                                <rect key="frame" x="141" y="486" width="39" height="30"/>
+                                <rect key="frame" x="138" y="489" width="39" height="30"/>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -58,13 +94,107 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Demographic" id="0Ii-z8-Idv"/>
+                    <navigationItem key="navigationItem" title="Basic Info." id="0Ii-z8-Idv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOI-WK-0G3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="259.86000000000001"/>
+            <point key="canvasLocation" x="791" y="-123"/>
         </scene>
-        <!--Family History-->
+        <!--Symptom Logger-->
+        <scene sceneID="o8Q-Rn-8Ak">
+            <objects>
+                <viewController id="adU-4r-Hua" customClass="SymptomLoggerViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AzK-5O-uzG"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQg-AA-g6Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IgE-bB-bdB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-HZ-odB">
+                                <rect key="frame" x="93" y="481" width="135" height="30"/>
+                                <state key="normal" title="make Appoint ment">
+                                    <color key="titleColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8TB-KG-cxl" kind="push" id="Ykv-OP-zym"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Symptom Logger" id="mTR-Cl-V2w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeB-wH-dSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="647"/>
+        </scene>
+        <!--HealthCruncher-->
+        <scene sceneID="kjp-vd-dze">
+            <objects>
+                <viewController id="wel-d2-agZ" customClass="HomeViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FF8-Qi-UaH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yb0-xf-Y4J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jsH-Ms-RDv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="docImg" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-0p-7rI">
+                                <rect key="frame" x="0.0" y="64" width="320" height="226"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Mmb-0p-7rI" secondAttribute="centerX" id="7gQ-h3-aKr"/>
+                            <constraint firstItem="Mmb-0p-7rI" firstAttribute="top" secondItem="FF8-Qi-UaH" secondAttribute="bottom" id="Dem-jn-SFs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mmb-0p-7rI" secondAttribute="trailing" constant="-16" id="SeN-ih-dAB"/>
+                            <constraint firstItem="Mmb-0p-7rI" firstAttribute="leading" secondItem="jsH-Ms-RDv" secondAttribute="leadingMargin" constant="-16" id="Zwr-EH-WZJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="HealthCruncher" id="tb8-7m-qnP">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="HN3-CH-tgf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e9N-Wz-Kmz">
+                                <rect key="frame" x="244" y="9" width="40" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="survey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="awv-Yr-iOh" kind="push" id="2zk-nC-3LV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAy-ip-OyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329.60000000000002" y="-123.53999999999999"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0RU-Rr-XLY">
+            <objects>
+                <tabBarController id="MTd-Bf-sPE" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Yx7-oP-Mon">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="I5k-0k-zf6" kind="relationship" relationship="viewControllers" id="cNk-dF-Ds8"/>
+                        <segue destination="bOS-Mo-n4L" kind="relationship" relationship="viewControllers" id="Gp6-iv-nhh"/>
+                        <segue destination="w3x-rt-RBy" kind="relationship" relationship="viewControllers" id="X5U-80-E9Z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Guk-fL-cpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="284"/>
+        </scene>
+        <!--Medical History-->
         <scene sceneID="7yn-Zd-wid">
             <objects>
                 <viewController id="wX6-34-VGH" sceneMemberID="viewController">
@@ -76,8 +206,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="1.    Does anyone in you family have a life-threatening illness?" translatesAutoresizingMaskIntoConstraints="NO" id="lBb-Bb-UcB">
+                                <rect key="frame" x="16" y="72" width="288" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1zl-UB-1Cr">
+                                <rect key="frame" x="99" y="131" width="123" height="29"/>
+                                <segments>
+                                    <segment title="YES"/>
+                                    <segment title="NO"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="2.    Were any family members diabetics?" translatesAutoresizingMaskIntoConstraints="NO" id="fd7-Qp-eR7">
+                                <rect key="frame" x="16" y="167" width="288" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qkj-7o-8y9">
+                                <rect key="frame" x="99" y="213" width="123" height="29"/>
+                                <segments>
+                                    <segment title="YES"/>
+                                    <segment title="NO"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="3.    Is there a history of heart disease in the family? " translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-7r-tFf">
+                                <rect key="frame" x="16" y="249" width="288" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t2T-Mz-3lk">
+                                <rect key="frame" x="99" y="307" width="123" height="29"/>
+                                <segments>
+                                    <segment title="YES"/>
+                                    <segment title="NO"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mya-p1-7bT">
+                                <rect key="frame" x="16" y="343" width="288" height="83"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">4.    Have family members been struggling with other issues such as asthma, high blood pressure, alcoholism, or other substance abuse? </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l6L-mk-Vw6">
+                                <rect key="frame" x="99" y="434" width="123" height="29"/>
+                                <segments>
+                                    <segment title="YES"/>
+                                    <segment title="NO"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYt-s5-7D5">
-                                <rect key="frame" x="137" y="489" width="32" height="30"/>
+                                <rect key="frame" x="144" y="489" width="32" height="30"/>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -88,13 +276,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Family History" id="3UG-Z4-IYD"/>
+                    <navigationItem key="navigationItem" title="Medical History" id="3UG-Z4-IYD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3y-QV-7Qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762.3999999999999" y="259.86000000000001"/>
+            <point key="canvasLocation" x="1222" y="-123"/>
         </scene>
-        <!--Physical Activity-->
+        <!--Substance Usage-->
         <scene sceneID="zkP-9U-A3b">
             <objects>
                 <viewController id="0Hn-gx-AV5" sceneMemberID="viewController">
@@ -106,55 +294,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.    Smoking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-Lq-Yl1">
+                                <rect key="frame" x="16" y="72" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wZl-zM-EUR">
+                                <rect key="frame" x="77" y="101" width="158" height="29"/>
+                                <segments>
+                                    <segment title="Heavy"/>
+                                    <segment title="Light"/>
+                                    <segment title="Never"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.    Alcohol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovr-Cg-f0X">
+                                <rect key="frame" x="16" y="179" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Yy-Bv-6tv">
+                                <rect key="frame" x="77" y="208" width="158" height="29"/>
+                                <segments>
+                                    <segment title="Heavy"/>
+                                    <segment title="Light"/>
+                                    <segment title="Never"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.    Other Substances" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-Ku-q7A">
+                                <rect key="frame" x="16" y="299" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-JU-qm7">
+                                <rect key="frame" x="77" y="329" width="158" height="29"/>
+                                <segments>
+                                    <segment title="Heavy"/>
+                                    <segment title="Light"/>
+                                    <segment title="Never"/>
+                                </segments>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBt-CG-fsT">
-                                <rect key="frame" x="137" y="512" width="39" height="30"/>
+                                <rect key="frame" x="137" y="489" width="39" height="30"/>
+                                <color key="tintColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cI9-kG-xZP" kind="push" id="EGM-Ig-kgW"/>
+                                    <segue destination="DJX-is-Dv0" kind="push" id="ACF-Rg-ScX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Physical Activity" id="ZhF-if-w3O"/>
+                    <navigationItem key="navigationItem" title="Substance Usage" id="ZhF-if-w3O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HZ-vh-gJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2167" y="259"/>
-        </scene>
-        <!--Dietary Intake-->
-        <scene sceneID="6lF-TN-uiJ">
-            <objects>
-                <viewController id="cI9-kG-xZP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1N5-me-ZsF"/>
-                        <viewControllerLayoutGuide type="bottom" id="KyP-6C-y6B"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cgb-DE-989">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahs-Oo-hLL">
-                                <rect key="frame" x="137" y="499" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="DJX-is-Dv0" kind="push" id="cm7-R1-EUo"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Dietary Intake" id="Frm-X4-a4b">
-                        <barButtonItem key="backBarButtonItem" title="Physical Activity" id="GZD-NR-kuX"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ijM-R2-Kuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2622" y="259"/>
+            <point key="canvasLocation" x="1641" y="-123"/>
         </scene>
         <!--Results-->
         <scene sceneID="cHX-b4-IrI">
@@ -171,19 +373,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS5-6b-Gna">
                                 <rect key="frame" x="76" y="319" width="168" height="30"/>
                                 <state key="normal" title="Dietry recommendations">
+                                    <color key="titleColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="iqb-0I-mgo" kind="push" id="zTh-KB-tzO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s8-dM-VuD">
-                                <rect key="frame" x="84" y="380" width="153" height="30"/>
-                                <state key="normal" title="physicial Appointment">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8TB-KG-cxl" kind="push" id="zw8-Dc-keT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-15-c62">
@@ -195,10 +389,21 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdz-oK-Rch">
                                 <rect key="frame" x="72" y="262" width="176" height="30"/>
                                 <state key="normal" title="Lifestly recommendations">
+                                    <color key="titleColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="iqb-0I-mgo" kind="push" id="M2E-Fo-j54"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s8-dM-VuD">
+                                <rect key="frame" x="51" y="380" width="219" height="30"/>
+                                <state key="normal" title="Take action and Talk to a doctor">
+                                    <color key="titleColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8TB-KG-cxl" kind="push" id="zw8-Dc-keT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFh-mi-lSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3035" y="259"/>
+            <point key="canvasLocation" x="2091" y="-123"/>
         </scene>
         <!--Make Appointment-->
         <scene sceneID="LIK-rg-3YY">
@@ -221,13 +426,22 @@
                     <view key="view" contentMode="scaleToFill" id="z2G-K6-fde">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EB-1C-sUA">
+                                <rect key="frame" x="137" y="120" width="41" height="30"/>
+                                <state key="normal" title="Photo">
+                                    <color key="titleColor" red="0.66274509803921566" green="0.13333333333333333" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Make Appointment" id="h3D-Ho-d2q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5R-DM-Xcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3475" y="671"/>
+            <point key="canvasLocation" x="2097" y="647"/>
         </scene>
         <!--Recommendationa-->
         <scene sceneID="JCe-gW-mid">
@@ -246,27 +460,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2V-d6-tb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3469" y="-23"/>
+            <point key="canvasLocation" x="2537" y="-123"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3fv-V9-meX">
+        <scene sceneID="qCK-Cq-kUL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bpn-AR-egN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I5k-0k-zf6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="7wk-yh-j7k"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ex-hq-T7G">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N7u-px-LNt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Rgi-G1-oh7"/>
+                        <segue destination="wel-d2-agZ" kind="relationship" relationship="rootViewController" id="kn9-eE-8aI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gdi-99-dyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNd-6G-xZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="259.86000000000001"/>
+            <point key="canvasLocation" x="-175" y="-123"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="9c6-Lh-uR0">
+            <objects>
+                <viewController id="0k3-bl-ByA" customClass="NotificationsViewController" customModule="HealthCruncher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vc6-jk-F5H"/>
+                        <viewControllerLayoutGuide type="bottom" id="p0z-Qo-4jl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jmp-wh-FlO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="IrS-pY-qAZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqN-Mw-6CJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357" y="1407.9999999999998"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dXJ-os-hma">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOS-Mo-n4L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="gGd-j7-CTb"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t1p-Ky-C10">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="adU-4r-Hua" kind="relationship" relationship="rootViewController" id="s4d-1o-vQL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TG-5v-6uZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="647"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zfy-12-iAH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w3x-rt-RBy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Fg9-UQ-ybU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="38i-hK-ggC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0k3-bl-ByA" kind="relationship" relationship="rootViewController" id="kkL-KG-ayP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uyp-qK-tHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="1407.9999999999998"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="docImg" width="300" height="200"/>
+        <image name="survey" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -274,5 +552,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="zTh-KB-tzO"/>
+        <segue reference="zw8-Dc-keT"/>
     </inferredMetricsTieBreakers>
 </document>
