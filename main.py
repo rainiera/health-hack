@@ -1,7 +1,7 @@
 import json
 from flask import Flask, render_template, request, jsonify
-from wtforms import Form, StringField, DecimalField, ValidationError, widgets, SelectField, BooleanField, RadioField
-from wtforms.validators import Required, Email, Length, Regexp, EqualTo
+from wtforms import Form, DecimalField, SelectField
+from wtforms.validators import Required
 import os
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ def index():
     fields = form._fields
     fields.pop("height")
     fields.pop("weight")
-    
+
     return render_template('index.html', form=form, fields=fields)
 
 @app.route('/', methods=['POST'])
@@ -44,4 +44,5 @@ class MainForm(Form):
 
 if __name__ == '__main__':
     port = int(os.environ.get("POST", 5000))
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0')
+#, port=8080)
