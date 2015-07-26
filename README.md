@@ -1,49 +1,42 @@
 # HealthCruncher  
 athenahealth hackathon 2015
 
-## Development    
+Netflix but for insurance companies to predict customers' health outcomes.  
+"B2B SaaS" (Business to business software as a service)  
+
+It is also an API that attempts to follow the principles of REST  
+
+## Development  
+- Some stuff we use: `flask`, DigitalOcean, `scikit-learn`, `anaconda` ;)  
+- `$ python main.py`  
 - Test at `0.0.0.0:5000`  
 - Use a `virtualenv` if you feel like it.  
 
 ## Deployment  
-- It is an IP address.  
-- In `/var/www/healthcruncher`, `run` config is `(host='0.0.0.0')`
-- `$ . venv/bin/activate`
-- `$ python api.py` or `$ python main.py` (TBD)
+- `$ ssh root@strtup.me`  
+- `$ cd /var/www/healthcruncher`  
+- `$ git pull`
+- In `main.py`, `debug` should be `FALSE`!!!  
+- `$ . venv/bin/activate`  
+- `$ nohup python main.py > /dev/null&` (TBD)  
 
-## How to set up development environment (no virtualenvs)
+## Undeployment
+- `$ ps -fA | grep python`  
+- Find the `<PID>` of the one that has python main.py
+- `kill <PID>`  
+- Save some 
 
-- I assume you have `homebrew`  
-- Go to your terminal  
-- `cd` into your `dev` directory (if you don't have one, make one!!)  
-- This command puts the source of the starter app (this repo) in the directory you're in.  
-`$ git clone https://github.com/rainiera/health-hack.git`  
-- This command installs a Python other than the Python installed on your system (which Mac OSX uses, and you don't really want to mess with). Also installs `pip`, which stands for "pip installs packages" (get it???).  
-`$ brew install python`  
-- Check that you're on the right Python:   
-`$ which -a python`  
-- The the first line in the output should be:  
-`/usr/local/bin/python`
-- If not, tell me!!!  
-- This command installs the Python libraries you need to make the web app. (Think `.jar` files in Java/libraries to imports)
-`$ pip install -r requirements.txt`  
-- This command installs Redis  
-`$ brew install redis`
-- Spin up a redis server on a new terminal tab (Cmd + T) or new terminal window (don't touch it after this!)
-`$ redis-server`
-- Now you're ready!
-
--`$ python main.py` to run the webserver on localhost  
+## Todo
+- Better the algorithm (actual data, better validation)  
+- Better form validation (CSRF protection!)  
+- Streamline deployment (scripts, etc.)  
 
 ## Primary roles
-Rainier Ababao - data science/deployment  
-Hayley Call - web dev  
-Sarah Gorring - web dev  
-Shaun Mataire -  iOS  
+Rainier Ababao - web dev/deployment/data science  
+Shaun Mataire -  iOS/deployment  
+Hayley Call - web dev/business model  
+Sarah Gorring - web dev/business model  
 
-## Idea (0.1)
+## Our original idea
 A web app that accepts user input on easily accessible patient data and output metrics based on a machine learning algorithm.
-
-Soon... an API to hook up to an iOS app!
-
 
