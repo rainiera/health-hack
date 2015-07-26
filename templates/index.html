@@ -2,33 +2,31 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-	<title>BMI Calculator</title>
+
+	<title>HealthCruncher</title>
 </head>
 
 <body>
-	This web app takes user input (weight, height) and stores it into Redis, returns bmi.
-	<br>
-<form>
+  <h1>healthcruncher</h1>
+  <div class="image-group">
+    <div class="sub">
+    <img src="{{ url_for('static', filename='imgs/doctorpatient.jpg') }}" alt="DoctorPatient" id="imgdp">
+    </div>
+    </div>
+    <h3> We want to provide you with most accurate health predictions </h3>
+    <h4>Enter weight and height:</h4>
+  <form action="." method="POST">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <label for="weight">weight</label>
+    <input type="text" class="form-control" id="weight" placeholder="weight" name="weight">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="height">height</label>
+    <input type="text" class="form-control" id="height" placeholder="height" name="height">
   </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">Submit</button name="my-form">
 </form>
 </body>
 

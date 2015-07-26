@@ -1,3 +1,52 @@
 body {
-	color: red;
+    background: url(../imgs/minions.png);
 }
+
+h1 {
+    text-align: center;
+    font-family: 'Raleway', 'sans-serif';
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sub {
+    line-height: 150%;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.8);
+/*    padding-bottom: 35px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+*/}
+
+
+#imgdp{ 
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+h4 {
+    margin-left: 75px;
+    margin-right: 800px;
+    text-align: center;
+    padding-bottom: 20px
+}
+.form-group {
+    text-align: left;
+    margin-left: 75px;
+    margin-right: 800px;
+    color: blue;
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    text-align: left;
+    margin-left: 75px;
+    margin-right: 800px;
+}
+
