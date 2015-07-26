@@ -1,10 +1,10 @@
 # HealthCruncher  
 athenahealth hackathon 2015
 
-Netflix but for insurance companies to predict customers' health outcomes.  
+Netflix but for predicting customers' health outcomes.  
 :dollar: "B2B SaaS" (Business to business software as a service)  
 
-It is also an API that attempts to follow the principles of REST :sleeping:  
+It is also an API that (will) attempt to follow the principles of REST :sleeping:  
 
 ## Development  
 - Some stuff we use: :snake: `flask`, DigitalOcean, `scikit-learn`, `anaconda`  
@@ -28,6 +28,7 @@ It is also an API that attempts to follow the principles of REST :sleeping:
 
 ## Todo
 - Better the algorithm (actual data, better validation)  
+- Better the API (fix some Flask routing issues, )
 - Better form validation (CSRF protection!)  
 - Streamline deployment (scripts, etc.)  
 

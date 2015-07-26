@@ -12,21 +12,67 @@ def index():
     fields = form._fields
     fields.pop("height")
     fields.pop("weight")
-    print fields
 
     return render_template('index.html', form=form, fields=fields)
 
-@app.route('/', methods=['POST'])
+@app.route('/api', methods=['POST'])
 def post():
     inputs = request.form
     weight = float(inputs['weight'])
     height = float(inputs['height'])
     bmi = (weight * 703)/(height**2)
-    outputs = {'foo':'bar', 'spam':'eggs', 'TODO':'the algorithm', 'bmi':bmi}
+    outputs = {'diabetes_predisp_before_50':'0.82238329', 'heart_disease_predisp_before_50':'0.57773635', 'bmi':bmi}
     result_dict = {}
     result_dict['inputs'] = inputs
+    # fields = ['height', 'weight', 'age', 'smoking', 'drinking', 'substances', 'familyillness', 'familydiabetes', 'familyheart']
+    # api_str = form_api_str(inputs, fields)
+    # return redirect(api_str)
     result_dict['outputs'] = outputs
     return jsonify(result_dict)
+
+# QUERYSTRING VERSION
+# def form_api_str(inputs, fields):
+#     result = "/api/inputs?"
+#     for field in fields:
+#         result += (field)
+#         result += ("=")
+#         result += (inputs.get(field))
+#         result += ("&")
+#     result = result[:-1]
+#     return result
+
+# UNDERSCORE VERSION
+# def form_api_str(inputs, fields):
+#     result = "/api/inputs?"
+#     for field in fields:
+#         result += (field)
+#         result += ("_")
+#         result += (inputs.get(field))
+#         result += ("__")
+#     result = result[:-1]
+#     return result
+
+# QUERYSTRING VERSION
+# @app.route('/api/inputs?height=<height>&weight=<weight>&age=<age>&smoking=<smoking>&drinking=<drinking>&substances=<substances>&familyillness=<familyillness>&familydiabetes=<familydiabetes>&familyheart=<familyheart>')
+# UNDERSCORE VERSION
+# @app.route('/api/height_<height>__weight_<weight>__age_<age>__smoking_<smoking>__drinking_<drinking>__substances_<substances>__familyillness_<familyillness>__familydiabetes_<familydiabetes>__familyheart_<familyheart>')
+# def api(height, weight, age, smoking, drinking, substances, familyillness, familydiabetes, familyheart):
+    ## fields = ['height', 'weight', 'age', 'smoking', 'drinking', 'substances', 'familyillness', 'familydiabetes', 'familyheart']
+    ## THERE IS A BETTER WAY OF DOING THIS
+    # inputs = {'height':height, 'weight':weight, 'age':age, 'smoking':smoking, 'drinking':drinking, 'substances':substances, 'familyillness':familyillness, 'familydiabetes':familydiabetes, 'familyheart':familyheart}
+    # weight = float(inputs.get('weight'))
+    # height = float(inputs.get('height'))
+    # bmi = (weight * 703)/(height**2)
+    # outputs = {'foo':'bar', 'spam':'eggs', 'TODO':'the algorithm', 'bmi':bmi}
+    # result_dict = {}
+    # result_dict['inputs'] = inputs
+    # result_dict['outputs'] = outputs
+    # return jsonify(result_dict)
+
+# @app.route('/api/inputs/')
+# def api2():
+#     return "made it"
+#     # return render_template('index.html')
 
 class MainForm(Form):
     height = DecimalField('height', validators=[Required()])
@@ -41,5 +87,4 @@ class MainForm(Form):
     familyheart = SelectField('is there is a history of heart disease in your family?', choices=[(-1, 'Please select an option'), (0, 'no'), (1, 'yes')])
 
 if __name__ == '__main__':
-    # port = int(os.environ.get("POST", 5000))
     app.run(host='0.0.0.0')
