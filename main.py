@@ -18,7 +18,7 @@ def index():
 @app.route('/', methods=['POST'])
 def post():
     inputs = request.form
-    outputs = {'foo':'bar', 'spam':'eggs'}
+    outputs = {'foo':'bar', 'spam':'eggs', 'TODO':'the algorithm'}
     result_dict = {}
     result_dict['inputs'] = inputs
     result_dict['outputs'] = outputs
