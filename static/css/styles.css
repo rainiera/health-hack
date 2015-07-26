@@ -1,6 +1,6 @@
 body {
     /* Adapted from: startupstockphotos.com */
-    background: url(../imgs/machinelearner_2_blur.jpg) center;
+    background: url(../imgs/machinelearner_2_blur.jpg) no-repeat center center fixed;
 }
 
 .content-container {}
@@ -56,3 +56,14 @@ button {
     margin: 0 auto;
 }
 
+.footer-container {
+    text-align: center;
+    margin-top:100px;
+}
+
+a {
+    text-decoration: none;
+} a:hover {
+    color: slategrey;
+    text-decoration: none;
+}
