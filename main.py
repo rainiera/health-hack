@@ -18,25 +18,14 @@ def index():
 @app.route('/', methods=['POST'])
 def post():
     inputs = request.form
-    outputs = {'foo':'bar', 'spam':'eggs', 'TODO':'the algorithm'}
+    weight = float(inputs['weight'])
+    height = float(inputs['height'])
+    bmi = (weight * 703)/(height**2)
+    outputs = {'foo':'bar', 'spam':'eggs', 'TODO':'the algorithm', 'bmi':bmi}
     result_dict = {}
     result_dict['inputs'] = inputs
     result_dict['outputs'] = outputs
     return jsonify(result_dict)
-    # json = request.json
-    # return jsonify(json)
-    # weight = float(request.form['weight'])
-    # height = float(request.form['height'])
-    # if weight == ''and height == '':
-    #     return "You must enter a weight and a height."
-    # elif weight == '':
-    #     return "You must enter a weight."
-    # elif height == '':
-    #     return "You must enter a height."
-    # else:
-    #     bmi = (weight * 703)/(height**2)
-    #     # return "You entered " + weight + " and " + height + " and your BMI is " + bmi + "."
-    #     return "Your BMI is {0}".format(bmi)
 
 @app.route('/api/results', methods=['POST'])
 def api():
