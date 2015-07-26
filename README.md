@@ -1,15 +1,13 @@
 # HealthCruncher  
 athenahealth hackathon 2015
 
-## Development  
-- No specific git flow because roles are compartmentalized (web devs are pair programming)  
-- Chrome does not cooperate with `0.0.0.0`, so `run` config is `(debug=True)`  
-- Test at `127.0.0.0:5000`  
+## Development    
+- Test at `0.0.0.0:5000`  
 - Use a `virtualenv` if you feel like it.  
 
 ## Deployment  
 - It is an IP address.  
-- In `/var/www/healthcruncher`, `run` config is `(host='0.0.0.0', port=8080, ~debug=True oooops~)`
+- In `/var/www/healthcruncher`, `run` config is `(host='0.0.0.0')`
 - `$ . venv/bin/activate`
 - `$ python api.py` or `$ python main.py` (TBD)
 
