@@ -1,0 +1,23 @@
+Demographic
+1. Age
+2. Prior heart attacks (Bool)
+3. race(white, black, Hispanic, Asian, Other)
+4. Sex (male, female)
+5. weight
+6. Height
+7. Smoking History (Current Heavy Smoker, Current Light smoker, Former Heavy Smoker, Former Light Smoker, Never Smoked)
+8. Drinking History (Current Heavy Smoker, Current Light smoker, Former Heavy Smoker, Former Light Smoker, Never Smoked)
+
+Family History
+n. (..)
+
+Physical Activity
+9. Average Physical Activity 
+10. Yoga
+11. 
+
+Dietary Intake - Fruits & Vegetables
+12. Average fruit servings (number of times) per week (none 1-5, 6-10, 11-15, 16+)
+13. Average vegetables servings (number of times) per week (none 1-5, 6-10, 11-15, 16+)
+14. Water intake (..)
+15 Sugar intake (...)
