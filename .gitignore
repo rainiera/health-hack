@@ -76,3 +76,5 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+venv/
