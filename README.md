@@ -3,7 +3,7 @@ athenahealth hackathon 2015
 
 # [Live demo](http://strtup.me:5000)  
 
->## See [athenahealth MDP hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264)
+## See [athenahealth MDP hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264)
 
 
 ###Netflix for predicting customers' health outcomes.  
