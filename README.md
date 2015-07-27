@@ -2,8 +2,8 @@
 conceived at the [athenahealth MDPhackathon 2015](http://mdphackathon.com/) (July 25-26, 2015)  
 
 # [Live web app demo](http://strtup.me:5000) / [iOS app screenshots](https://github.com/rainiera/health-hack/blob/master/iOS_screens.pdf)  
-# [MDPhackathon slide deck](https://github.com/rainiera/health-hack/blob/master/slide_deck.pdf)  
-# [athenahealth MDPhackathon's tweet on HealthCruncher](https://twitter.com/athenaMDP/status/625392613168779264)  
+## [MDPhackathon slide deck](https://github.com/rainiera/health-hack/blob/master/slide_deck.pdf)  
+## [athenahealth MDPhackathon's tweet on HealthCruncher](https://twitter.com/athenaMDP/status/625392613168779264)  
 
 # What is HealthCruncher?
 ## Netflix for predicting insurance customer health outcomes.  
@@ -37,6 +37,7 @@ conceived at the [athenahealth MDPhackathon 2015](http://mdphackathon.com/) (Jul
 - Better the API (fix some Flask routing issues)  
 - Better form validation (CSRF protection!)  
 - Streamline deployment (scripts, etc.)  
+- Better domain  
 
 ## Who we are
 Rainier Ababao - web dev/deployment/data science  
