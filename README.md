@@ -6,10 +6,9 @@ athenahealth hackathon 2015
 >## See [athenahealth MDP hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264)
 
 
->###Netflix for predicting customers' health outcomes.  
->A "B2B SaaS" provider for insurance companies. (Business to business software as a service) :dollar:   
-
->A (soon-to-be) RESTful :sleeping: API that wraps a machine learning algorithm. Web app demo and iOS app linked to the API for the hackathon.
+###Netflix for predicting customers' health outcomes.  
+A "B2B SaaS" provider for insurance companies. (Business to business software as a service) :dollar:   
+A (soon-to-be) RESTful :sleeping: API that wraps a machine learning algorithm. Web app demo and iOS app linked to the API for the hackathon.
 
 ## Development  
 - Some stuff we use: :snake: `flask`, DigitalOcean, `scikit-learn`, `anaconda`  
