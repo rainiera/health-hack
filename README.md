@@ -1,14 +1,15 @@
 # HealthCruncher  
+athenahealth hackathon 2015  
 
 # [Live demo](http://strtup.me:5000)  
 
->## [athenahealth hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264)
+>## See [athenahealth MDP hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264)
 
-athenahealth hackathon 2015  
 
->###Netflix for predicting customers' health outcomes. A "B2B SaaS" provider for insurance companies. (Business to business software as a service) :dollar:   
+>###Netflix for predicting customers' health outcomes.  
+>A "B2B SaaS" provider for insurance companies. (Business to business software as a service) :dollar:   
 
-A (soon-to-be) RESTful :sleeping: API that wraps a machine learning algorithm. Web app demo and iOS app linked to the API for the hackathon.
+>A (soon-to-be) RESTful :sleeping: API that wraps a machine learning algorithm. Web app demo and iOS app linked to the API for the hackathon.
 
 ## Development  
 - Some stuff we use: :snake: `flask`, DigitalOcean, `scikit-learn`, `anaconda`  
@@ -46,3 +47,4 @@ Sarah Gorring - web dev/business model
 ## Our original idea
 A web app that accepts user input on easily accessible patient data and output metrics based on a machine learning algorithm.
 
+### Built with ❤ in Austin, TX
