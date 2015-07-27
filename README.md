@@ -21,7 +21,7 @@ It is also an API that (will) attempt to follow the principles of REST :sleeping
 - `$ git pull`
 - In `main.py`, `debug` should be `FALSE`!!!  
 - `$ . venv/bin/activate`  
-- :snake: `$ nohup python main.py > /dev/null&` (TBD)  
+- :snake: `$ nohup python main.py > /dev/null&`  
 
 ## Undeployment
 - `$ ps -fA | grep python`  
