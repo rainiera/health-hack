@@ -2,14 +2,13 @@
 
 # [Live demo](http://strtup.me:5000)  
 
->## [athenahealth hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264) got the most favorites out of all the pitches tweeted. Do we get some sort of prize for that?
+>## [athenahealth hackathon's tweet about us](https://twitter.com/athenaMDP/status/625392613168779264)
 
 athenahealth hackathon 2015  
 
-Netflix but for predicting customers' health outcomes.  
-:dollar: "B2B SaaS" (Business to business software as a service)  
+>###Netflix for predicting customers' health outcomes. A "B2B SaaS" provider for insurance companies. (Business to business software as a service) :dollar:   
 
-It is also an API that (will) attempt to follow the principles of REST :sleeping:  
+A (soon-to-be) RESTful :sleeping: API that wraps a machine learning algorithm. Web app demo and iOS app linked to the API for the hackathon.
 
 ## Development  
 - Some stuff we use: :snake: `flask`, DigitalOcean, `scikit-learn`, `anaconda`  
