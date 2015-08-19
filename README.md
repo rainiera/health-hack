@@ -1,7 +1,7 @@
 # HealthCruncher  
 conceived at the [**athenahealth** MDPhackathon 2015](http://mdphackathon.com/) (July 25-26, 2015)  
 
-# [Live web app demo](http://strtup.me:5000) / [iOS app screenshots](https://github.com/rainiera/health-hack/blob/master/iOS_screens.pdf)  
+# ~~[Live web app demo](http://strtup.me:5000)~~ / [iOS app screenshots](https://github.com/rainiera/health-hack/blob/master/iOS_screens.pdf)  
 ## [MDPhackathon slide deck](https://github.com/rainiera/health-hack/blob/master/slide_deck.pdf) (3 minutes)
 ## [MDPhackathon's tweet about HealthCruncher](https://twitter.com/athenaMDP/status/625392613168779264)  
 
