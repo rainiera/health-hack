@@ -1,6 +1,7 @@
 # HealthCruncher  
 conceived at the [athenahealth MDPhackathon 2015](http://mdphackathon.com/) (July 25-26, 2015)  
 
+# [Static web app demo](http://rainier.io/projects/health-hack.html)
 # [Live web app demo](http://strtup.me:5000) / [iOS app screenshots](https://github.com/rainiera/health-hack/blob/master/iOS_screens.pdf)  
 # [MDPhackathon slide deck](https://github.com/rainiera/health-hack/blob/master/slide_deck.pdf)  
 # [athenahealth MDPhackathon's tweet on HealthCruncher](https://twitter.com/athenaMDP/status/625392613168779264)  
@@ -41,8 +42,8 @@ conceived at the [athenahealth MDPhackathon 2015](http://mdphackathon.com/) (Jul
 ## Who we are
 Rainier Ababao - web dev/deployment/data science  
 Shaun Mataire -  iOS/deployment  
-Hayley Call - web dev/business model/slide deck maestro  
-Sarah Gorring - web dev/business model/slide deck maestro  
+Hayley Call - business model/slide deck maestro/web dev  
+Sarah Gorring - business model/slide deck maestro/web dev  
 
 ## The initial idea
 A web app that inputs easily accessible patient data and outputs metrics (like heart disease or diabetes predisposition) based on a machine learning algorithm.
